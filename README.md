@@ -1,11 +1,14 @@
 # Email Spam Classification Using Logistic Regression
 
+
 This project aims to develop a binary classification model that predicts whether an email is spam or not based on the frequency of commonly occurring words. A logistic regression model is used due to its interpretability and effectiveness for linearly separable classification problems. The project follows a systematic machine learning pipeline including data preprocessing, model training, evaluation, and performance reporting.
+
 
 ## Dataset Overview :
 Source: Provided CSV file containing pre-processed word frequency data from emails.
 
 Total Samples: 5,172 emails
+
 
 ## Features:
 
@@ -17,27 +20,31 @@ Column 3001: Target label (1 = Spam, 0 = Not Spam)
 
 The dataset represents each email as a feature vector of word frequencies, allowing for compact storage and efficient modeling without textual parsing or NLP pipelines.
 
+
 ## Objective :
 To build a machine learning model that can accurately classify emails as spam or not spam using logistic regression, and evaluate its performance using appropriate classification metrics.
+
 
 ## Workflow :
 Data Loading and Exploration
 
 Loaded the dataset using pandas and performed basic checks on shape, types, and missing values.
 
-## Data Preprocessing
+
+## 1. Data Preprocessing
 
 Extracted feature matrix X and target vector Y.
 
 Applied feature scaling using StandardScaler to normalize data for logistic regression.
 
-## Model Training
+
+## 2. Model Training
 
 Split the dataset into training and testing sets using an 80:20 ratio.
 
 Trained a logistic regression model using scikit-learn with increased iterations to ensure convergence.
 
-## Model Evaluation
+## 3. Model Evaluation
 
 Generated predictions on the test set.
 
@@ -62,7 +69,7 @@ Precision was slightly lower, indicating a small number of legitimate emails wer
 
 The confusion matrix confirms minimal false negatives and manageable false positives.
 
-## Confusion Matrix:
+## 4. Confusion Matrix:
 
 | **Actual \\ Predicted** | **Not Spam (0)** | **Spam (1)** |
 |-------------------------|------------------|--------------|
@@ -70,7 +77,7 @@ The confusion matrix confirms minimal false negatives and manageable false posit
 | **Spam (1)**            | 5                | 291          |
 
 
-## Technologies Used :
+## 5. Technologies Used :
 1. Python 3.9+
 2. Pandas – data manipulation
 3. NumPy – numerical computing
